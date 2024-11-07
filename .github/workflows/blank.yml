@@ -25,6 +25,7 @@ jobs:
         run: echo "Hola clase soy el mensaje desde la consola"
 
       - name: Mostrar las variables de entorno
+        if: ${{env.username == 'admin'}}
         run: | # "|"  este es para ejecutar varias lineas en un mismo run
           echo "username ${{env.username}}"
           echo "password: ${{env.password}}"
