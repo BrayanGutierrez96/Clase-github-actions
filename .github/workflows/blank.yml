@@ -36,5 +36,7 @@ jobs:
         run: echo "La version del proyecto es ${{vars.PROJECTVERSION}}"
 
       - name : Mostrar la informacion del repositorio
-        run : echo "repositorio ${{toJson(github.event)}}"
+        run : |
+         echo "repositorio ${{toJson(github.event)}}"
+         echo "Autor $GITHUB_ACTOR"
 
